@@ -16,4 +16,9 @@ public class EmailInputTest {
     public void testInputNotEmpty() {
         Assertions.assertTrue(validator.validateInput(""));
     }
+
+    @Test
+    public void testInputHasAtSymbol() {
+        Assertions.assertTrue(validator.validateInput("@"));
+    }
 }
