@@ -13,22 +13,22 @@ public class EmailInputTest {
     }
 
     @Test
-    public void testInputNotEmpty() {
+    public void testEmailNotEmpty() {
         Assertions.assertFalse(emailValidator.hasAt(""));
     }
 
     @Test
-    public void testInputHasAtSymbol() {
+    public void testEmailHasAtSymbol() {
         Assertions.assertTrue(emailValidator.hasAt("@"));
     }
 
     @Test
-    public void testInputHasPrefix() {
+    public void testEmailHasPrefix() {
         Assertions.assertTrue(emailValidator.validPrefix("hello@"));
     }
 
     @Test
-    public void testInputHasDomain() {
+    public void testEmailHasDomain() {
         Assertions.assertTrue(emailValidator.validDomain("@1he.1ie"));
     }
 
