@@ -19,6 +19,6 @@ public class PasswordInputTest {
 
     @Test
     public void testPasswordHasOneLetter() {
-        Assertions.assertTrue(passwordValidator.hasLetter());
+        Assertions.assertTrue(passwordValidator.hasLetter("password"));
     }
 }
