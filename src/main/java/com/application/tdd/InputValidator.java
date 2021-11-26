@@ -1,7 +1,7 @@
 package com.application.tdd;
 
 public class InputValidator {
-    public boolean validateInput(String input) {
+    public boolean hasAt(String input) {
         return input.contains("@");
     }
 }

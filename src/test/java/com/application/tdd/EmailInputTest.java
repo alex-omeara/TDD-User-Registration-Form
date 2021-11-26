@@ -14,11 +14,11 @@ public class EmailInputTest {
 
     @Test
     public void testInputNotEmpty() {
-        Assertions.assertFalse(validator.validateInput(""));
+        Assertions.assertFalse(validator.hasAt(""));
     }
 
     @Test
     public void testInputHasAtSymbol() {
-        Assertions.assertTrue(validator.validateInput("@"));
+        Assertions.assertTrue(validator.hasAt("@"));
     }
 }
