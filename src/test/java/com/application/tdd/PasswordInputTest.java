@@ -17,4 +17,8 @@ public class PasswordInputTest {
         Assertions.assertTrue(passwordValidator.checkLength("password"));
     }
 
+    @Test
+    public void testPasswordHasOneLetter() {
+        Assertions.assertTrue(passwordValidator.hasLetter());
+    }
 }
