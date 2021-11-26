@@ -2,7 +2,7 @@ package com.application.tdd;
 
 import java.util.regex.Pattern;
 
-public class InputValidator {
+public class EmailValidator {
     public boolean hasAt(String input) {
         return input.contains("@");
     }

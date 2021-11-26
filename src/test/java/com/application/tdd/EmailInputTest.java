@@ -5,30 +5,30 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class EmailInputTest {
-    InputValidator validator;
+    EmailValidator emailValidator;
 
     @BeforeEach
     public void setUp() {
-        validator = new InputValidator();
+        emailValidator = new EmailValidator();
     }
 
     @Test
     public void testInputNotEmpty() {
-        Assertions.assertFalse(validator.hasAt(""));
+        Assertions.assertFalse(emailValidator.hasAt(""));
     }
 
     @Test
     public void testInputHasAtSymbol() {
-        Assertions.assertTrue(validator.hasAt("@"));
+        Assertions.assertTrue(emailValidator.hasAt("@"));
     }
 
     @Test
     public void testInputHasPrefix() {
-        Assertions.assertTrue(validator.validPrefix("hello@"));
+        Assertions.assertTrue(emailValidator.validPrefix("hello@"));
     }
 
     @Test
     public void testInputHasDomain() {
-        Assertions.assertTrue(validator.validDomain("hello@1he.1ie"));
+        Assertions.assertTrue(emailValidator.validDomain("hello@1he.1ie"));
     }
 }
