@@ -34,9 +34,9 @@ public class PasswordInputTest {
 
     @Test
     public void testInvalidPasswordRejected() {
-        Assertions.assertFalse(passwordValidator.validatePassword("under7"));
-        Assertions.assertFalse(passwordValidator.validatePassword("12345abcde"));
-        Assertions.assertFalse(passwordValidator.validatePassword("12345456!^&"));
-        Assertions.assertFalse(passwordValidator.validatePassword("bob&&&&"));
+        Assertions.assertFalse(passwordValidator.validate("under7"));
+        Assertions.assertFalse(passwordValidator.validate("12345abcde"));
+        Assertions.assertFalse(passwordValidator.validate("12345456!^&"));
+        Assertions.assertFalse(passwordValidator.validate("bob&&&&"));
     }
 }

@@ -17,6 +17,21 @@ public class Controller {
 
     @FXML
     protected void onSubmitButtonClick() {
-        statusMessage.setText("Hello World");
+        EmailValidator emailValidator = new EmailValidator();
+        boolean validEmail = emailValidator.validate(emailInput.getText());
+        PasswordValidator passwordValidator = new PasswordValidator();
+        boolean validPassword = passwordValidator.validate(passwordInput.getText());
+        String outputMessage = "";
+        if (!validEmail) {
+            outputMessage += "Invalid Email";
+            if (!validPassword) {
+                outputMessage += "\nInvalid Password";
+            }
+        } else if (!validPassword) {
+            outputMessage = "Invalid Password";
+        } else {
+            outputMessage = "Success";
+        }
+        statusMessage.setText(outputMessage);
     }
 }
