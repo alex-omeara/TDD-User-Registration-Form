@@ -12,14 +12,14 @@ public class PasswordValidator {
     }
 
     public boolean hasLetter(String password) {
-        return Pattern.matches(".*[a-zA-Z]+", password);
+        return Pattern.matches("^.*[a-zA-Z]+.*$", password);
     }
 
     public boolean hasSpecialChar(String password) {
-        return Pattern.matches(".*[*^&@!]+", password);
+        return Pattern.matches("^.*[*^&@!]+.*$", password);
     }
 
     public boolean hasDigit(String password) {
-        return Pattern.matches(".*[0-9]+", password);
+        return Pattern.matches("^.*[0-9]+.*$", password);
     }
 }
