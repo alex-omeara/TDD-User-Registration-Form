@@ -3,6 +3,10 @@ package com.application.tdd;
 import java.util.regex.Pattern;
 
 public class EmailValidator {
+    public boolean validate() {
+        return true;
+    }
+
     public boolean hasAt(String input) {
         return input.contains("@");
     }
