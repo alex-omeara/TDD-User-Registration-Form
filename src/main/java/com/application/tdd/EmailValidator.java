@@ -4,7 +4,7 @@ import java.util.regex.Pattern;
 
 public class EmailValidator {
     public boolean validate(String email) {
-        return true;
+        return hasAt(email) && validPrefix(email) && validDomain(email);
     }
 
     public boolean hasAt(String input) {
