@@ -5,7 +5,9 @@ public class InputValidator {
         return input.contains("@");
     }
 
-    public boolean validPrefix(String prefix) {
-        return false;
+    public boolean validPrefix(String input) {
+        String[] emailParts = input.split("@");
+        String domain = emailParts[0];
+        return !domain.isEmpty();
     }
 }
