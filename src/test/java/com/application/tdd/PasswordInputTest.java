@@ -31,4 +31,9 @@ public class PasswordInputTest {
     public void testPasswordHasOneDigit() {
         Assertions.assertTrue(passwordValidator.hasDigit("he1e"));
     }
+
+    @Test
+    public void testInvalidPasswordRejected() {
+        Assertions.assertTrue(passwordValidator.validatePassword());
+    }
 }

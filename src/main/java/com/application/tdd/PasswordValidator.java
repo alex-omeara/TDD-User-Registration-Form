@@ -3,6 +3,10 @@ package com.application.tdd;
 import java.util.regex.Pattern;
 
 public class PasswordValidator {
+    public boolean validatePassword() {
+        return false;
+    }
+
     public boolean checkLength(String password) {
         return password.length() >= 7;
     }
