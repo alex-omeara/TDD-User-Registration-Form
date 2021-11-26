@@ -10,4 +10,8 @@ public class InputValidator {
         String domain = emailParts[0];
         return !domain.isEmpty();
     }
+
+    public boolean validDomain() {
+        return false;
+    }
 }

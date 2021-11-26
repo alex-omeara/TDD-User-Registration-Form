@@ -26,4 +26,9 @@ public class EmailInputTest {
     public void testInputHasPrefix() {
         Assertions.assertTrue(validator.validPrefix("hello@"));
     }
+
+    @Test
+    public void testInputHasDomain() {
+        Assertions.assertTrue(validator.validDomain());
+    }
 }
