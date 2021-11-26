@@ -3,7 +3,7 @@ package com.application.tdd;
 import java.util.regex.Pattern;
 
 public class EmailValidator {
-    public boolean validate() {
+    public boolean validate(String email) {
         return true;
     }
 
@@ -18,8 +18,7 @@ public class EmailValidator {
     }
 
     public boolean validDomain(String input) {
-        String regex = "[a-zA-Z0-9]+\\.[a-zA-Z0-9]+";
-        String[] emailParts = input.split("@");
-        return Pattern.matches(regex, emailParts[1]);
+        String regex = ".*@[a-zA-Z0-9]+\\.[a-zA-Z0-9]+";
+        return Pattern.matches(regex, input);
     }
 }
