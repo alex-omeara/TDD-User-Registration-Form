@@ -3,7 +3,7 @@ package com.application.tdd;
 import java.util.regex.Pattern;
 
 public class PasswordValidator {
-    public boolean validatePassword(String password) {
+    public boolean validate(String password) {
         return checkLength(password) && hasDigit(password) && hasLetter(password) && hasSpecialChar(password);
     }
 
