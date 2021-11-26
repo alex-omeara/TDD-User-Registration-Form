@@ -7,11 +7,13 @@ public class InputValidator {
 
     public boolean validPrefix(String input) {
         String[] emailParts = input.split("@");
-        String domain = emailParts[0];
-        return !domain.isEmpty();
+        String prefix = emailParts[0];
+        return !prefix.isEmpty();
     }
 
-    public boolean validDomain() {
-        return false;
+    public boolean validDomain(String input) {
+        String[] emailParts = input.split("@");
+        String domain = emailParts[0];
+        return !domain.isEmpty();
     }
 }
