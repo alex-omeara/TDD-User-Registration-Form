@@ -11,7 +11,7 @@ public class PasswordValidator {
         return Pattern.matches("[a-zA-Z]+", password);
     }
 
-    public boolean hasSpecialChar() {
-        return false;
+    public boolean hasSpecialChar(String password) {
+        return Pattern.matches(".*[*^&@!].*", password);
     }
 }

@@ -24,6 +24,6 @@ public class PasswordInputTest {
 
     @Test
     public void testPasswordHasSpecialChar() {
-        Assertions.assertTrue(passwordValidator.hasSpecialChar());
+        Assertions.assertTrue(passwordValidator.hasSpecialChar("he@y"));
     }
 }
