@@ -29,6 +29,6 @@ public class EmailInputTest {
 
     @Test
     public void testInputHasDomain() {
-        Assertions.assertTrue(validator.validDomain("hello@123.ie"));
+        Assertions.assertTrue(validator.validDomain("hello@1he.1ie"));
     }
 }

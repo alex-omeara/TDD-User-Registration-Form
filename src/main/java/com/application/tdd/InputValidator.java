@@ -1,5 +1,7 @@
 package com.application.tdd;
 
+import java.util.regex.Pattern;
+
 public class InputValidator {
     public boolean hasAt(String input) {
         return input.contains("@");
@@ -12,8 +14,8 @@ public class InputValidator {
     }
 
     public boolean validDomain(String input) {
+        String regex = "[a-zA-Z0-9]+\\.[a-zA-Z0-9]+";
         String[] emailParts = input.split("@");
-        String domain = emailParts[0];
-        return !domain.isEmpty();
+        return Pattern.matches(regex, emailParts[1]);
     }
 }
