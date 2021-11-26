@@ -3,8 +3,8 @@ package com.application.tdd;
 import java.util.regex.Pattern;
 
 public class PasswordValidator {
-    public boolean validatePassword() {
-        return false;
+    public boolean validatePassword(String password) {
+        return checkLength(password) && hasDigit(password) && hasLetter(password) && hasSpecialChar(password);
     }
 
     public boolean checkLength(String password) {
@@ -12,14 +12,14 @@ public class PasswordValidator {
     }
 
     public boolean hasLetter(String password) {
-        return Pattern.matches(".*[a-zA-Z]+.*", password);
+        return Pattern.matches(".*[a-zA-Z]+", password);
     }
 
     public boolean hasSpecialChar(String password) {
-        return Pattern.matches(".*[*^&@!]+.*", password);
+        return Pattern.matches(".*[*^&@!]+", password);
     }
 
     public boolean hasDigit(String password) {
-        return Pattern.matches(".*[0-9]+.*", password);
+        return Pattern.matches(".*[0-9]+", password);
     }
 }
