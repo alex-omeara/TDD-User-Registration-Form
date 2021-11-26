@@ -21,4 +21,9 @@ public class EmailInputTest {
     public void testInputHasAtSymbol() {
         Assertions.assertTrue(validator.hasAt("@"));
     }
+
+    @Test
+    public void testInputHasPrefix() {
+        Assertions.assertTrue(validator.validPrefix("hello@"));
+    }
 }
