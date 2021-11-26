@@ -14,7 +14,7 @@ public class EmailInputTest {
 
     @Test
     public void testInputNotEmpty() {
-        Assertions.assertTrue(validator.validateInput(""));
+        Assertions.assertFalse(validator.validateInput(""));
     }
 
     @Test
