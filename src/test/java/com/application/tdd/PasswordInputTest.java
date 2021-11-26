@@ -26,4 +26,9 @@ public class PasswordInputTest {
     public void testPasswordHasSpecialChar() {
         Assertions.assertTrue(passwordValidator.hasSpecialChar("he@y"));
     }
+
+    @Test
+    public void testPasswordHasOneDigit() {
+        Assertions.assertTrue(passwordValidator.hasDigit());
+    }
 }

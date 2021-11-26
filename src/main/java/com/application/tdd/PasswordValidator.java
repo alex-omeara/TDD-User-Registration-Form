@@ -14,4 +14,8 @@ public class PasswordValidator {
     public boolean hasSpecialChar(String password) {
         return Pattern.matches(".*[*^&@!].*", password);
     }
+
+    public boolean hasDigit() {
+        return false;
+    }
 }
