@@ -10,4 +10,8 @@ public class PasswordValidator {
     public boolean hasLetter(String password) {
         return Pattern.matches("[a-zA-Z]+", password);
     }
+
+    public boolean hasSpecialChar() {
+        return false;
+    }
 }
