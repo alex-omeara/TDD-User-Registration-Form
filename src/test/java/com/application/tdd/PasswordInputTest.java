@@ -1,42 +1,37 @@
 package com.application.tdd;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class PasswordInputTest {
-    PasswordValidator passwordValidator;
+import static com.application.tdd.PasswordValidator.*;
 
-    @BeforeEach
-    public void setUp() {
-        passwordValidator = new PasswordValidator();
-    }
+public class PasswordInputTest {
 
     @Test
     public void testPasswordAtLeastSevenCharacters() {
-        Assertions.assertTrue(passwordValidator.checkLength("password"));
+        Assertions.assertTrue(checkLength("password"));
     }
 
     @Test
     public void testPasswordHasOneLetter() {
-        Assertions.assertTrue(passwordValidator.hasLetter("password"));
+        Assertions.assertTrue(hasLetter("password"));
     }
 
     @Test
     public void testPasswordHasSpecialChar() {
-        Assertions.assertTrue(passwordValidator.hasSpecialChar("he@y"));
+        Assertions.assertTrue(hasSpecialChar("he@y"));
     }
 
     @Test
     public void testPasswordHasOneDigit() {
-        Assertions.assertTrue(passwordValidator.hasDigit("he1e"));
+        Assertions.assertTrue(hasDigit("he1e"));
     }
 
     @Test
     public void testInvalidPasswordRejected() {
-        Assertions.assertFalse(passwordValidator.validate("under7"));
-        Assertions.assertFalse(passwordValidator.validate("12345abcde"));
-        Assertions.assertFalse(passwordValidator.validate("12345456!^&"));
-        Assertions.assertFalse(passwordValidator.validate("bob&&&&"));
+        Assertions.assertFalse(validatePassword("under7"));
+        Assertions.assertFalse(validatePassword("12345abcde"));
+        Assertions.assertFalse(validatePassword("12345456!^&"));
+        Assertions.assertFalse(validatePassword("bob&&&&"));
     }
 }
