@@ -5,6 +5,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 
+import static com.application.tdd.EmailValidator.validateEmail;
+import static com.application.tdd.PasswordValidator.validatePassword;
+
 public class Controller {
     @FXML
     private TextField emailInput;
@@ -17,10 +20,8 @@ public class Controller {
 
     @FXML
     protected void onSubmitButtonClick() {
-        EmailValidator emailValidator = new EmailValidator();
-        boolean validEmail = emailValidator.validate(emailInput.getText());
-        PasswordValidator passwordValidator = new PasswordValidator();
-        boolean validPassword = passwordValidator.validate(passwordInput.getText());
+        boolean validEmail = validateEmail(emailInput.getText());
+        boolean validPassword = validatePassword(passwordInput.getText());
         String outputMessage = "";
         if (!validEmail) {
             outputMessage += "Invalid Email";
